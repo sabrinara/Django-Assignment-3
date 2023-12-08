@@ -1,11 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>This is About Us</h1>
-</body>
-</html>
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<h1 class="text-center display-1 my-5">About Us</h1>
+
+<div class="container row mx-auto g-5">
+    <div class="col-md-6">
+        <img src="{% static 'pic/about.jpg' %}" class="img-fluid rounded" alt="image">
+    </div >
+    <div class="col-md-6">
+
+        <section class="mt-5">
+          
+            <p>Whether you're here for an intimate dinner, a celebration with friends and family, or a corporate event,
+                SWEET DINE offers a versatile and welcoming space to suit every occasion.</p>
+
+            <p>Join us and become a part of our culinary community, where hospitality meets excellence.</p>     
+            <p>Discover the artistry of flavors, the warmth of hospitality, and the joy of sharing a meal with loved
+                ones at SWEET DINE.</p>
+        </section>
+
+    </div>
+</div>
+
+
+
+{% endblock %}
