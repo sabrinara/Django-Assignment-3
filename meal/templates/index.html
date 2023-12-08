@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container-fluid mx-auto my-5" style="width: 90%;">
+    <div class="row row-cols-1 row-cols-md-3 g-4 ms-auto">
+      {% for i in meals.categories %}
+      <div class="col">
+        <div class="card" style="width: 22rem">
+          <img
+            src="{{i.strCategoryThumb}}"
+            class="img-fluid "
+            alt="{{i.strCategory}}"
+          />
+          <div class="card-body">
+            <h5 class="card-title fw-bold">{{i.strCategory}}</h5>
+            <p class="card-text">
+              {{i.strCategoryDescription | truncatewords:10}}
+            </p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}
